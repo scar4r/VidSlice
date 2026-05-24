@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "VidSlice",
+    "slug": "vidslice",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.vidslice.app"
+    },
+    "android": {
+      "package": "com.vidslice.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-av",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow VidSlice to access your photos.",
+          "savePhotosPermission": "Allow VidSlice to save split videos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "scheme": "vidslice",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
